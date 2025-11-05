@@ -6,7 +6,7 @@
 /*   By: vblxssv <vblxssv@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 20:45:23 by vblxssv           #+#    #+#             */
-/*   Updated: 2025/11/05 22:27:53 by vblxssv          ###   ########.fr       */
+/*   Updated: 2025/11/05 23:25:14 by vblxssv          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,18 @@ void *ft_memmove(void *dest, const void *src, size_t n)
             *dummy_dest++ = *dummy_src++;
     }
     return (dest);
+}
+
+void *ft_memchr(const void *s, int c, size_t n)
+{
+    const unsigned char *dummy;
+    
+    dummy = s;
+    while (n--)
+    {
+        if (*dummy == (unsigned char)c)
+            return ((void *)dummy);
+        dummy++;
+    }
+    return (NULL);
 }
