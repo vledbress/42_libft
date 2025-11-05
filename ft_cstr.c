@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_cstr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vblxssv <vblxssv@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 14:43:19 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/05 14:43:28 by vborysov         ###   ########.fr       */
+/*   Created: 2025/11/05 21:53:32 by vblxssv           #+#    #+#             */
+/*   Updated: 2025/11/05 21:54:07 by vblxssv          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalpha(char c)
+int ft_strlen(char *str)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+    int result;
+
+    result = 0;
+    while (str[result])
+        result++;
+    return (result);
 }
 
