@@ -1,5 +1,5 @@
 NAME = libft.a
-SRC = ft_cstr.c ft_memory.c ft_cchar.c
+SRC = $(wildcard *.c)
 OBJS = $(SRC:.c=.o)
 FLAGS = -Wall -Werror -Wextra
 
