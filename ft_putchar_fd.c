@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 13:39:54 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 13:49:58 by vborysov         ###   ########.fr       */
+/*   Created: 2025/11/06 14:59:51 by vborysov          #+#    #+#             */
+/*   Updated: 2025/11/06 15:02:41 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <unistd.h>
 
-void	*ft_memcpy(void	*dest, const void	*src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char		*dummy_dest;
-	const unsigned char	*dummy_src;
-
-	dummy_dest = dest;
-	dummy_src = src;
-	while (n--)
-		*dummy_dest++ = *dummy_src++;
-	return (dest);
+	write(fd, &c, 1);
 }

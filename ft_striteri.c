@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 13:39:54 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 13:49:58 by vborysov         ###   ########.fr       */
+/*   Created: 2025/11/06 15:15:10 by vborysov          #+#    #+#             */
+/*   Updated: 2025/11/06 15:17:34 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memcpy(void	*dest, const void	*src, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned char		*dummy_dest;
-	const unsigned char	*dummy_src;
+	unsigned int	index;
 
-	dummy_dest = dest;
-	dummy_src = src;
-	while (n--)
-		*dummy_dest++ = *dummy_src++;
-	return (dest);
+	if (!s || !f)
+		return ;
+	index = 0;
+	while (s[index])
+	{
+		f(index, s + index);
+		index++;
+	}
 }

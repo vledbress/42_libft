@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 13:39:54 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 13:49:58 by vborysov         ###   ########.fr       */
+/*   Created: 2025/11/06 14:07:52 by vborysov          #+#    #+#             */
+/*   Updated: 2025/11/06 15:36:50 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memcpy(void	*dest, const void	*src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char		*dummy_dest;
-	const unsigned char	*dummy_src;
+	char	*result;
+	size_t	index;
 
-	dummy_dest = dest;
-	dummy_src = src;
-	while (n--)
-		*dummy_dest++ = *dummy_src++;
-	return (dest);
+	index = 0;
+	result = (char *)malloc(len + 1);
+	if (!result)
+		return (NULL);
+	while (index < len && s[index + start])
+	{
+		result[index] = s[index + start];
+		index++;
+	}
+	result[index] = 0;
+	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:33:24 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 13:34:01 by vborysov         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:49:26 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ size_t	ft_strlcpy(char *dst, const char	*src, size_t dsize)
 	src_len = ft_strlen(src);
 	if (!dsize)
 		return (src_len);
-
 	index = 0;
 	while (index < dsize - 1 && src[index])
 	{
