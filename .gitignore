@@ -1,4 +1,11 @@
-/test/*.*
+# test binaries
+/test/*
+
+# object files
 *.o
+
+# static libraries
 *.a
-/.vscode/*.*
+
+# IDE settings
+.vscode/
