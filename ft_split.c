@@ -6,7 +6,7 @@
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:25:11 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 15:53:40 by vborysov         ###   ########.fr       */
+/*   Updated: 2025/11/08 15:15:26 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (result[len] = NULL, result);
 }
-
