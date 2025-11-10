@@ -6,11 +6,11 @@
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:22:27 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 13:47:49 by vborysov         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:18:56 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

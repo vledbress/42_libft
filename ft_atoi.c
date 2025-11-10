@@ -6,7 +6,7 @@
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:46:57 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 12:57:14 by vborysov         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:38:12 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ static int	ft_issign(char c)
 
 static int	ft_isspace(char c)
 {
-	return (c == ' ');
+	return (c == ' ' || c == '\t' || c == '\n'
+		|| c == '\v' || c == '\f' || c == '\r');
 }
 
 int	ft_atoi(const char	*str)

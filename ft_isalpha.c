@@ -6,11 +6,11 @@
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:21:38 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 13:21:58 by vborysov         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:18:21 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

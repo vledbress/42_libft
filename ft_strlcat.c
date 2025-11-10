@@ -6,7 +6,7 @@
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:34:20 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 13:49:39 by vborysov         ###   ########.fr       */
+/*   Updated: 2025/11/10 20:17:41 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,13 @@ size_t	ft_strlcat(char *dst, const char	*src, size_t dsize)
 	size_t	remain_space;
 	size_t	index;
 
-	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	if (dsize <= dst_len)
+	if (!dst && dsize == 0)
+		return (src_len);
+	dst_len = 0;
+	while (dst_len < dsize && dst[dst_len])
+		dst_len++;
+	if (dst_len == dsize)
 		return (dst_len + src_len);
 	remain_space = dsize - dst_len - 1;
 	index = 0;

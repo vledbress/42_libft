@@ -6,11 +6,11 @@
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:24:09 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 13:49:04 by vborysov         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:22:33 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);

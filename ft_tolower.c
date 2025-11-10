@@ -6,11 +6,11 @@
 /*   By: vborysov <vborysov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 20:14:03 by vborysov          #+#    #+#             */
-/*   Updated: 2025/11/06 13:24:21 by vborysov         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:22:39 by vborysov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(char c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
